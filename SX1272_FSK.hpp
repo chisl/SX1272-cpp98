@@ -32,7 +32,7 @@ public:
 	
 	/*
 	 * REG Fifo:
-	 * FIFO data input/output 
+	 * FIFO data input/output
 	 */
 	struct Fifo
 	{
@@ -74,8 +74,8 @@ public:
 		
 		/* Bits LongRangeMode: */
 		/*
-		 * This bit can be modified only in Sleep mode. 
-		 *           A write operation on other device modes is ignored. 
+		 * This bit can be modified only in Sleep mode.
+		 * A write operation on other device modes is ignored.
 		 */
 		struct LongRangeMode
 		{
@@ -87,8 +87,8 @@ public:
 		};
 		/* Bits ModulationType: */
 		/*
-		 * Modulation scheme: 
-		 * 'b10, 'b11: reserved 
+		 * Modulation scheme:
+		 * 'b10, 'b11: reserved
 		 */
 		struct ModulationType
 		{
@@ -100,17 +100,17 @@ public:
 		};
 		/* Bits ModulationShaping: */
 		/*
-		 * Data shaping: 
-		 *           In FSK:
-		 *           - 00: no shaping
-		 *           - 01: Gaussian filter BT = 1.0 10 
-		 *           - 10: Gaussian filter BT = 0.5 11 
-		 *           - 11: Gaussian filter BT = 0.3 
-		 *           In OOK:
-		 *           - 00: no shaping
-		 *           - 01: filtering with fcutoff = bit_rate10
-		 *           - 10: filtering with fcutoff = 2*bit_rate (for bit_rate < 125 kbps) 
-		 *           - 11: reserved 
+		 * Data shaping:
+		 * In FSK:
+		 * - 00: no shaping
+		 * - 01: Gaussian filter BT = 1.0 10
+		 * - 10: Gaussian filter BT = 0.5 11
+		 * - 11: Gaussian filter BT = 0.3
+		 * In OOK:
+		 * - 00: no shaping
+		 * - 01: filtering with fcutoff = bit_rate10
+		 * - 10: filtering with fcutoff = 2*bit_rate (for bit_rate < 125 kbps)
+		 * - 11: reserved
 		 */
 		struct ModulationShaping
 		{
@@ -157,7 +157,7 @@ public:
 	
 	/*
 	 * REG BitrateMsb:
-	 * MSB of Bit Rate (chip rate if Manchester encoding is enabled) 
+	 * MSB of Bit Rate (chip rate if Manchester encoding is enabled)
 	 */
 	struct BitrateMsb
 	{
@@ -193,7 +193,7 @@ public:
 	
 	/*
 	 * REG BitrateLsb:
-	 * LSB of bit rate (chip rate if Manchester encoding is enabled)BitRate =  ---------------------------F----X----O-----S---C------------------------------BitRate(15,0) + -B----i--t--r--a----t--e---F----r--a----c-16Default value: 4.8 kbps 
+	 * LSB of bit rate (chip rate if Manchester encoding is enabled)BitRate =  ---------------------------F----X----O-----S---C------------------------------BitRate(15,0) + -B----i--t--r--a----t--e---F----r--a----c-16Default value: 4.8 kbps
 	 */
 	struct BitrateLsb
 	{
@@ -272,7 +272,7 @@ public:
 	
 	/*
 	 * REG FdevLsb:
-	 * LSB of the frequency deviationFdev = Fstep  Fdev(15,0)Default value: 5 kHz 
+	 * LSB of the frequency deviationFdev = Fstep  Fdev(15,0)Default value: 5 kHz
 	 */
 	struct FdevLsb
 	{
@@ -308,7 +308,7 @@ public:
 	
 	/*
 	 * REG FrfMsb:
-	 * MSB of the RF carrier frequency 
+	 * MSB of the RF carrier frequency
 	 */
 	struct FrfMsb
 	{
@@ -344,7 +344,7 @@ public:
 	
 	/*
 	 * REG FrfMid:
-	 * MSB of the RF carrier frequency 
+	 * MSB of the RF carrier frequency
 	 */
 	struct FrfMid
 	{
@@ -380,7 +380,7 @@ public:
 	
 	/*
 	 * REG FrfLsb:
-	 * LSB of RF carrier frequencyFrf = Fstep  Frf23;0Default value: 915.000 MHzThe RF frequency is taken into account internally only when:entering FSRX/FSTX modesre-starting the receiver 
+	 * LSB of RF carrier frequencyFrf = Fstep  Frf23;0Default value: 915.000 MHzThe RF frequency is taken into account internally only when:entering FSRX/FSTX modesre-starting the receiver
 	 */
 	struct FrfLsb
 	{
@@ -481,8 +481,8 @@ public:
 		/* Bits LowPnTxPllOff: */
 		/*
 		 * Select a higher power, lower phase noise PLL only when the transmitter is used:
-		 *           0 : Standard PLL used in Rx mode, Lower PN PLL in Tx
-		 *           1 : Standard PLL used in both Tx and Rx modes 
+		 * 0 : Standard PLL used in Rx mode, Lower PN PLL in Tx
+		 * 1 : Standard PLL used in both Tx and Rx modes
 		 */
 		struct LowPnTxPllOff
 		{
@@ -756,7 +756,7 @@ public:
 	
 	/*
 	 * REG RssiCollision:
-	 * Sets the threshold used to consider that an interferer is detected, witnessing a packet collision. 1dB/LSB (only RSSI increase) Default: 10dB 
+	 * Sets the threshold used to consider that an interferer is detected, witnessing a packet collision. 1dB/LSB (only RSSI increase) Default: 10dB
 	 */
 	struct RssiCollision
 	{
@@ -792,7 +792,7 @@ public:
 	
 	/*
 	 * REG RssiThresh:
-	 * RSSI trigger level for the Rssi interrupt:- RssiThreshold / 2 [dBm] 
+	 * RSSI trigger level for the Rssi interrupt:- RssiThreshold / 2 [dBm]
 	 */
 	struct RssiThresh
 	{
@@ -828,7 +828,7 @@ public:
 	
 	/*
 	 * REG RssiValue:
-	 * Absolute value of the RSSI in dBm, 0.5dB steps. RSSI = - RssiValue/2 [dBm] 
+	 * Absolute value of the RSSI in dBm, 0.5dB steps. RSSI = - RssiValue/2 [dBm]
 	 */
 	struct RssiValue
 	{
@@ -1031,7 +1031,7 @@ public:
 	
 	/*
 	 * REG OokFix:
-	 * Fixed threshold for the Data Slicer in OOK modeFloor threshold for the Data Slicer in OOK when Peak mode is used 
+	 * Fixed threshold for the Data Slicer in OOK modeFloor threshold for the Data Slicer in OOK when Peak mode is used
 	 */
 	struct OokFix
 	{
@@ -1199,7 +1199,7 @@ public:
 	
 	/*
 	 * REG AfcMsb:
-	 * MSB of the AfcValue, 2’s complement format. Can be used to overwrite the current AFC value 
+	 * MSB of the AfcValue, 2’s complement format. Can be used to overwrite the current AFC value
 	 */
 	struct AfcMsb
 	{
@@ -1235,7 +1235,7 @@ public:
 	
 	/*
 	 * REG AfcLsb:
-	 * LSB of the AfcValue, 2’s complement format. Can be used to overwrite the current AFC value 
+	 * LSB of the AfcValue, 2’s complement format. Can be used to overwrite the current AFC value
 	 */
 	struct AfcLsb
 	{
@@ -1271,7 +1271,7 @@ public:
 	
 	/*
 	 * REG Fei:
-	 * measured frequency offset, 2’s complement. Frequency error = FeiValue x Fstep 
+	 * measured frequency offset, 2’s complement. Frequency error = FeiValue x Fstep
 	 */
 	struct Fei
 	{
@@ -1357,7 +1357,7 @@ public:
 	
 	/*
 	 * REG RxTimeout1:
-	 * Timeout interrupt is generated TimeoutRxRssi*16*Tbit after switching to Rx mode if Rssi interrupt doesn’t occur (i.e.RssiValue > RssiThreshold)0x00: TimeoutRxRssi is disabled 
+	 * Timeout interrupt is generated TimeoutRxRssi*16*Tbit after switching to Rx mode if Rssi interrupt doesn’t occur (i.e.RssiValue > RssiThreshold)0x00: TimeoutRxRssi is disabled
 	 */
 	struct RxTimeout1
 	{
@@ -1393,7 +1393,7 @@ public:
 	
 	/*
 	 * REG RxTimeout2:
-	 * Timeout interrupt is generated TimeoutRxPreamble*16*Tbit after switching to Rx mode if Preamble interrupt doesn’t occur0x00: TimeoutRxPreamble is disabled 
+	 * Timeout interrupt is generated TimeoutRxPreamble*16*Tbit after switching to Rx mode if Preamble interrupt doesn’t occur0x00: TimeoutRxPreamble is disabled
 	 */
 	struct RxTimeout2
 	{
@@ -1429,7 +1429,7 @@ public:
 	
 	/*
 	 * REG RxTimeout3:
-	 * Timeout interrupt is generated TimeoutSignalSync*16*Tbit after the Rx mode is programmed, if SyncAddress doesn’t occur 0x00: TimeoutSignalSync is disabled 
+	 * Timeout interrupt is generated TimeoutSignalSync*16*Tbit after the Rx mode is programmed, if SyncAddress doesn’t occur 0x00: TimeoutSignalSync is disabled
 	 */
 	struct RxTimeout3
 	{
@@ -1465,7 +1465,7 @@ public:
 	
 	/*
 	 * REG RxDelay:
-	 * Additional delay before an automatic receiver restart is launched: Delay = InterPacketRxDelay*4*Tbit 
+	 * Additional delay before an automatic receiver restart is launched: Delay = InterPacketRxDelay*4*Tbit
 	 */
 	struct RxDelay
 	{
@@ -1550,7 +1550,7 @@ public:
 	
 	/*
 	 * REG PreambleMsb:
-	 * Size of the preamble to be sent (from TxStartCondition fulfilled). (MSB byte) 
+	 * Size of the preamble to be sent (from TxStartCondition fulfilled). (MSB byte)
 	 */
 	struct PreambleMsb
 	{
@@ -1586,7 +1586,7 @@ public:
 	
 	/*
 	 * REG PreambleLsb:
-	 * Size of the preamble to be sent (from TxStartCondition fulfilled). (LSB byte) 
+	 * Size of the preamble to be sent (from TxStartCondition fulfilled). (LSB byte)
 	 */
 	struct PreambleLsb
 	{
@@ -1689,7 +1689,7 @@ public:
 	
 	/*
 	 * REG SyncValue1:
-	 * 1st byte of Sync word. (MSB byte) Used if SyncOn is set. 
+	 * 1st byte of Sync word. (MSB byte) Used if SyncOn is set.
 	 */
 	struct SyncValue1
 	{
@@ -1725,7 +1725,7 @@ public:
 	
 	/*
 	 * REG SyncValue2:
-	 * 2nd byte of Sync wordUsed if SyncOn is set and (SyncSize +1) >= 2. 
+	 * 2nd byte of Sync wordUsed if SyncOn is set and (SyncSize +1) >= 2.
 	 */
 	struct SyncValue2
 	{
@@ -1761,7 +1761,7 @@ public:
 	
 	/*
 	 * REG SyncValue3:
-	 * 3rd byte of Sync word.Used if SyncOn is set and (SyncSize +1) >= 3. 
+	 * 3rd byte of Sync word.Used if SyncOn is set and (SyncSize +1) >= 3.
 	 */
 	struct SyncValue3
 	{
@@ -1797,7 +1797,7 @@ public:
 	
 	/*
 	 * REG SyncValue4:
-	 * 4th byte of Sync word.Used if SyncOn is set and (SyncSize +1) >= 4. 
+	 * 4th byte of Sync word.Used if SyncOn is set and (SyncSize +1) >= 4.
 	 */
 	struct SyncValue4
 	{
@@ -1833,7 +1833,7 @@ public:
 	
 	/*
 	 * REG SyncValue5:
-	 * 5th byte of Sync word.Used if SyncOn is set and (SyncSize +1) >= 5. 
+	 * 5th byte of Sync word.Used if SyncOn is set and (SyncSize +1) >= 5.
 	 */
 	struct SyncValue5
 	{
@@ -1869,7 +1869,7 @@ public:
 	
 	/*
 	 * REG SyncValue6:
-	 * 6th byte of Sync word.Used if SyncOn is set and (SyncSize +1) >= 6. 
+	 * 6th byte of Sync word.Used if SyncOn is set and (SyncSize +1) >= 6.
 	 */
 	struct SyncValue6
 	{
@@ -1905,7 +1905,7 @@ public:
 	
 	/*
 	 * REG SyncValue7:
-	 * 7th byte of Sync word.Used if SyncOn is set and (SyncSize +1) >= 7. 
+	 * 7th byte of Sync word.Used if SyncOn is set and (SyncSize +1) >= 7.
 	 */
 	struct SyncValue7
 	{
@@ -1941,7 +1941,7 @@ public:
 	
 	/*
 	 * REG SyncValue8:
-	 * 8th byte of Sync word.Used if SyncOn is set and (SyncSize +1) = 8. 
+	 * 8th byte of Sync word.Used if SyncOn is set and (SyncSize +1) = 8.
 	 */
 	struct SyncValue8
 	{
@@ -2128,7 +2128,7 @@ public:
 	
 	/*
 	 * REG PayloadLength:
-	 * If PacketFormat = 0 (fixed), payload length.If PacketFormat = 1 (variable), max length in Rx, not used in Tx. 
+	 * If PacketFormat = 0 (fixed), payload length.If PacketFormat = 1 (variable), max length in Rx, not used in Tx.
 	 */
 	struct PayloadLength
 	{
@@ -2164,7 +2164,7 @@ public:
 	
 	/*
 	 * REG NodeAdrs:
-	 * Node address used in address filtering. 
+	 * Node address used in address filtering.
 	 */
 	struct NodeAdrs
 	{
@@ -2200,7 +2200,7 @@ public:
 	
 	/*
 	 * REG BroadcastAdrs:
-	 * Broadcast address used in address filtering. 
+	 * Broadcast address used in address filtering.
 	 */
 	struct BroadcastAdrs
 	{
@@ -2470,7 +2470,7 @@ public:
 	
 	/*
 	 * REG Timer1Coef:
-	 * Multiplying coefficient for Timer 1 
+	 * Multiplying coefficient for Timer 1
 	 */
 	struct Timer1Coef
 	{
@@ -2506,7 +2506,7 @@ public:
 	
 	/*
 	 * REG Timer2Coef:
-	 * Multiplying coefficient for Timer 2 
+	 * Multiplying coefficient for Timer 2
 	 */
 	struct Timer2Coef
 	{
@@ -2623,7 +2623,7 @@ public:
 	
 	/*
 	 * REG Temp:
-	 * Measured temperature-1°C per LsbNeeds calibration for absolute accuracy 
+	 * Measured temperature-1°C per LsbNeeds calibration for absolute accuracy
 	 */
 	struct Temp
 	{
@@ -2881,7 +2881,7 @@ public:
 		/* Bits Dio0Mapping: */
 		/*
 		 * Mapping of pins DIO0 to DIO5See Table 17 for mapping in LoRa modeSee Table 28 for mapping in Continuous mode.
-		 *           See Table 29 for mapping in Packet mode 
+		 * See Table 29 for mapping in Packet mode
 		 */
 		struct Dio0Mapping
 		{
@@ -2959,8 +2959,8 @@ public:
 		};
 		/* Bits MapPreambleDetect: */
 		/*
-		 * Allows the mapping of either Rssi Or PreambleDetect to the DIO pins, as summarized on 
-		 *           Table 28 and Table 29 
+		 * Allows the mapping of either Rssi Or PreambleDetect to the DIO pins, as summarized on
+		 * Table 28 and Table 29
 		 */
 		struct MapPreambleDetect
 		{
@@ -2992,7 +2992,7 @@ public:
 	
 	/*
 	 * REG Version:
-	 * Version code of the chip. Bits 7-4 give the full revision number; bits 3-0 give the metal mask revision number. 
+	 * Version code of the chip. Bits 7-4 give the full revision number; bits 3-0 give the metal mask revision number.
 	 */
 	struct Version
 	{
@@ -3420,7 +3420,7 @@ public:
 	
 	/*
 	 * REG FormerTemp:
-	 * Temperature saved during the latest IQ (RSSI and Image) calibrated. Same format as TempValue in RegTemp. 
+	 * Temperature saved during the latest IQ (RSSI and Image) calibrated. Same format as TempValue in RegTemp.
 	 */
 	struct FormerTemp
 	{

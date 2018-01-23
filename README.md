@@ -8,6 +8,6 @@
 | Manufacturer | Semtech |
 | Language     | CPP98 |
 | URL          | [chisl.io](https://chisl.io/v/SX1272?t=cpp&r=98) |
-| Datasheet    | [&copy; Semtech](http://www.semtech.com/images/datasheet/sx1272.pdf) |
+| Datasheet    | [&copy; Semtech](https://www.semtech.com/uploads/documents/sx1272.pdf) |
 
 Automatically created by **[chisl.io](https://chisl.io)**

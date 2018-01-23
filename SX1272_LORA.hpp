@@ -2,12 +2,17 @@
  * name:        SX1272
  * description: 860 MHz to 1020 MHz Low Power Long Range Transceiver featuring the LoRa (TM) long range modem
  * manuf:       Semtech
- * version:     0.1
- * url:         http://www.semtech.com/images/datasheet/sx1272.pdf
+ * version:     Version 0.1
+ * url:         https://www.semtech.com/uploads/documents/sx1272.pdf
  * date:        2016-08-01
  * author       https://chisl.io/
  * file:        SX1272_LORA.hpp
  */
+
+/*                                                                                                       *
+ *                                   THIS FILE IS AUTOMATICALLY CREATED                                  *
+ *                                    D O     N O T     M O D I F Y  !                                   *
+ *                                                                                                       */
 
 #include <cinttypes>
 
@@ -43,7 +48,7 @@ public:
 		/* Bits Fifo: */
 		struct Fifo_
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b00000000; // 8'h0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -81,7 +86,7 @@ public:
 		 */
 		struct LongRangeMode
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b10000000; // [7]
 			static const uint8_t FSK_OOK_MODE = 0b0; // FSK/OOK Mode
@@ -94,7 +99,7 @@ public:
 		 */
 		struct AccesSharedReg
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b01000000; // [6]
 			static const uint8_t LORA = 0b0; // Access LoRa registers page 0x0D: 0x3F
@@ -110,7 +115,7 @@ public:
 		/* Device modes  */
 		struct Mode
 		{
-			/* Mode:rwt */
+			/* MODE rwt */
 			static const uint8_t dflt = 0b001; // 3'b1
 			static const uint8_t mask = 0b00000111; // [0,1,2]
 			static const uint8_t SLEEP = 0b00; // 
@@ -157,7 +162,7 @@ public:
 		/* Bits Fr: */
 		struct Fr_
 		{
-			/* Mode:rwt */
+			/* MODE rwt */
 			static const uint32_t dflt = 0b111001001100000000000000; // 24'he4c000
 			static const uint32_t mask = 0b111111111111111111111111; // [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]
 		};
@@ -196,7 +201,7 @@ public:
 		 */
 		struct PaSelect
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'd0
 			static const uint8_t mask = 0b10000000; // [7]
 		};
@@ -213,7 +218,7 @@ public:
 		 */
 		struct OutputPower
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b1111; // 4'hf
 			static const uint8_t mask = 0b00001111; // [0,1,2,3]
 		};
@@ -256,7 +261,7 @@ public:
 		 */
 		struct LowPnTxPllOff
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b1; // 1'd1
 			static const uint8_t mask = 0b00010000; // [4]
 		};
@@ -264,7 +269,7 @@ public:
 		/* Rise/Fall time of ramp up/down in FSK  */
 		struct PaRamp_
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b1001; // 4'h9
 			static const uint8_t mask = 0b00001111; // [0,1,2,3]
 			static const uint8_t PA_RAMP_3_4_ms = 0b000; // 
@@ -325,7 +330,7 @@ public:
 		 */
 		struct OcpOn
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b1; // 1'b1
 			static const uint8_t mask = 0b00100000; // [5]
 		};
@@ -340,8 +345,8 @@ public:
 		 */
 		struct OcpTrim
 		{
-			/* Mode:rw */
-			static const uint8_t dflt = 0b01011; // 5'hb
+			/* MODE rw */
+			static const uint8_t dflt = 0b01011; // 5'b1011
 			static const uint8_t mask = 0b00011111; // [0,1,2,3,4]
 		};
 	};
@@ -379,7 +384,7 @@ public:
 		 */
 		struct LnaGain
 		{
-			/* Mode:rwx */
+			/* MODE rwx */
 			static const uint8_t dflt = 0b001; // 3'd1
 			static const uint8_t mask = 0b11100000; // [5,6,7]
 			static const uint8_t G1 = 0b01; // maximum gain
@@ -398,7 +403,7 @@ public:
 		/* Bits LnaBoost: */
 		struct LnaBoost
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b00; // 2'd0
 			static const uint8_t mask = 0b00000011; // [0,1]
 			static const uint8_t DEFAULT = 0b00; // Default LNA current
@@ -436,7 +441,7 @@ public:
 		/* Bits FifoAddrPtr: */
 		struct FifoAddrPtr_
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b00000000; // 8'h0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -472,7 +477,7 @@ public:
 		/* Bits FifoTxBaseAddr: */
 		struct FifoTxBaseAddr_
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b10000000; // 8'h80
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -508,7 +513,7 @@ public:
 		/* Bits FifoRxBaseAddr: */
 		struct FifoRxBaseAddr_
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b00000000; // 8'h0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -544,7 +549,7 @@ public:
 		/* Bits FifoRxCurrentAddr: */
 		struct FifoRxCurrentAddr_
 		{
-			/* Mode:r */
+			/* MODE r */
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
 	};
@@ -578,7 +583,7 @@ public:
 		/* Timeout interrupt mask: setting this bit masks the corresponding IRQ in RegIrqFlags  */
 		struct RxTimeoutMask
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'd0
 			static const uint8_t mask = 0b10000000; // [7]
 		};
@@ -586,7 +591,7 @@ public:
 		/* Packet reception complete interrupt mask: setting this bit masks the corresponding IRQ in RegIrqFlags  */
 		struct RxDoneMask
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'd0
 			static const uint8_t mask = 0b01000000; // [6]
 		};
@@ -594,7 +599,7 @@ public:
 		/* Payload CRC error interrupt mask: setting this bit masks the corresponding IRQ in RegIrqFlags  */
 		struct PayloadCrcErrorMask
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'd0
 			static const uint8_t mask = 0b00100000; // [5]
 		};
@@ -602,7 +607,7 @@ public:
 		/* Valid header received in Rx mask: setting this bit masks the corresponding IRQ in RegIrqFlags  */
 		struct ValidHeaderMask
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'd0
 			static const uint8_t mask = 0b00010000; // [4]
 		};
@@ -610,7 +615,7 @@ public:
 		/* FIFO Payload transmission complete interrupt mask: setting this bit masks the corresponding IRQ in RegIrqFlags  */
 		struct TxDoneMask
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'd0
 			static const uint8_t mask = 0b00001000; // [3]
 		};
@@ -618,7 +623,7 @@ public:
 		/* CAD complete interrupt mask: setting this bit masks the corresponding IRQ in RegIrqFlags  */
 		struct CadDoneMask
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'd0
 			static const uint8_t mask = 0b00000100; // [2]
 		};
@@ -626,7 +631,7 @@ public:
 		/* FHSS change channel interrupt mask: setting this bit masks the corresponding IRQ in RegIrqFlags  */
 		struct FhssChangeChannelMask
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'd0
 			static const uint8_t mask = 0b00000010; // [1]
 		};
@@ -634,7 +639,7 @@ public:
 		/* Cad Detected Interrupt Mask: setting this bit masks the corresponding IRQ in RegIrqFlags  */
 		struct CadDetectedMask
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'd0
 			static const uint8_t mask = 0b00000001; // [0]
 		};
@@ -669,7 +674,7 @@ public:
 		/* Timeout interrupt: writing a 1 clears the IRQ  */
 		struct RxTimeout
 		{
-			/* Mode:rc */
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'd0
 			static const uint8_t mask = 0b10000000; // [7]
 		};
@@ -677,7 +682,7 @@ public:
 		/* Packet reception complete interrupt: writing a 1 clears the IRQ  */
 		struct RxDone
 		{
-			/* Mode:rc */
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'd0
 			static const uint8_t mask = 0b01000000; // [6]
 		};
@@ -685,7 +690,7 @@ public:
 		/* Payload CRC error interrupt: writing a 1 clears the IRQ  */
 		struct PayloadCrcError
 		{
-			/* Mode:rc */
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'd0
 			static const uint8_t mask = 0b00100000; // [5]
 		};
@@ -693,7 +698,7 @@ public:
 		/* Valid header received in Rx: writing a 1 clears the IRQ  */
 		struct ValidHeader
 		{
-			/* Mode:rc */
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'd0
 			static const uint8_t mask = 0b00010000; // [4]
 		};
@@ -701,7 +706,7 @@ public:
 		/* FIFO Payload transmission complete interrupt: writing a 1 clears the IRQ  */
 		struct TxDone
 		{
-			/* Mode:rc */
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'd0
 			static const uint8_t mask = 0b00001000; // [3]
 		};
@@ -709,7 +714,7 @@ public:
 		/* CAD complete: write to clear: writing a 1 clears the IRQ  */
 		struct CadDone
 		{
-			/* Mode:rc */
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'd0
 			static const uint8_t mask = 0b00000100; // [2]
 		};
@@ -717,7 +722,7 @@ public:
 		/* FHSS change channel interrupt: writing a 1 clears the IRQ  */
 		struct FhssChangeChannel
 		{
-			/* Mode:rc */
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'd0
 			static const uint8_t mask = 0b00000010; // [1]
 		};
@@ -725,7 +730,7 @@ public:
 		/* Valid Lora signal detected during CAD operation: writing a 1 clears the IRQ  */
 		struct CadDetected
 		{
-			/* Mode:rc */
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'd0
 			static const uint8_t mask = 0b00000001; // [0]
 		};
@@ -761,7 +766,7 @@ public:
 		/* Bits RxNbBytes: */
 		struct RxNbBytes_
 		{
-			/* Mode:r */
+			/* MODE r */
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
 	};
@@ -797,7 +802,7 @@ public:
 		/* Bits RxHeaderCntValue: */
 		struct RxHeaderCntValue_
 		{
-			/* Mode:r */
+			/* MODE r */
 			static const uint16_t mask = 0b1111111111111111; // [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 		};
 	};
@@ -833,7 +838,7 @@ public:
 		/* Bits RxPacketCntValue: */
 		struct RxPacketCntValue_
 		{
-			/* Mode:rc */
+			/* MODE rc */
 			static const uint16_t mask = 0b1111111111111111; // [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 		};
 	};
@@ -867,35 +872,41 @@ public:
 		/* Coding rate of last header received */
 		struct RxCodingRate
 		{
+			/* MODE r */
 			static const uint8_t mask = 0b11100000; // [5,6,7]
 		};
 		/* Bits ModemClear: */
 		struct ModemClear
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b1; // 1'b1
 			static const uint8_t mask = 0b00010000; // [4]
 		};
 		/* Bits HeaderInfoValid: */
 		struct HeaderInfoValid
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00001000; // [3]
 		};
 		/* Bits RxOngoing: */
 		struct RxOngoing
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000100; // [2]
 		};
 		/* Bits SignalSynchronized: */
 		struct SignalSynchronized
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000010; // [1]
 		};
 		/* Bits SignalDetected: */
 		struct SignalDetected
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000001; // [0]
 		};
@@ -931,7 +942,7 @@ public:
 		/* Bits PktSnrValue: */
 		struct PktSnrValue_
 		{
-			/* Mode:r */
+			/* MODE r */
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
 	};
@@ -966,7 +977,7 @@ public:
 		/* Bits PktRssiValue: */
 		struct PktRssiValue_
 		{
-			/* Mode:r */
+			/* MODE r */
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
 	};
@@ -1001,7 +1012,7 @@ public:
 		/* Bits RssiValue: */
 		struct RssiValue_
 		{
-			/* Mode:r */
+			/* MODE r */
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
 	};
@@ -1039,6 +1050,7 @@ public:
 		 */
 		struct PllTimeout
 		{
+			/* MODE r */
 			static const uint8_t mask = 0b10000000; // [7]
 		};
 		/* Bits CrcOnPayload: */
@@ -1049,12 +1061,14 @@ public:
 		 */
 		struct CrcOnPayload
 		{
+			/* MODE r */
 			static const uint8_t mask = 0b01000000; // [6]
 		};
 		/* Bits FhssPresentChannel: */
 		/* Current value of frequency hopping channel in use. */
 		struct FhssPresentChannel
 		{
+			/* MODE r */
 			static const uint8_t mask = 0b00111111; // [0,1,2,3,4,5]
 		};
 	};
@@ -1088,12 +1102,12 @@ public:
 		/* Signal bandwidth  */
 		struct Bw
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b00; // 2'b0
 			static const uint8_t mask = 0b11000000; // [6,7]
 			static const uint8_t BW_125 = 0b00; // 125 kHz
 			static const uint8_t BW_250 = 0b01; // 250 kHz
-			static const uint8_t BW_500 = 0b01; // 500 kHz
+			static const uint8_t BW_500 = 0b10; // 500 kHz
 			static const uint8_t reserved_0 = 0b11; // 
 		};
 		/* Bits CodingRate: */
@@ -1104,7 +1118,7 @@ public:
 		 */
 		struct CodingRate
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b001; // 3'b1
 			static const uint8_t mask = 0b00111000; // [3,4,5]
 			static const uint8_t CR_4_5 = 0b01; // 4/5
@@ -1119,7 +1133,7 @@ public:
 		 */
 		struct ImplicitHeaderModeOn
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000100; // [2]
 		};
@@ -1134,7 +1148,7 @@ public:
 		 */
 		struct RxPayloadCrcOn
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b1; // 1'b1
 			static const uint8_t mask = 0b00000010; // [1]
 		};
@@ -1146,7 +1160,7 @@ public:
 		 */
 		struct LowDataRateOptimize
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'd0
 			static const uint8_t mask = 0b00000001; // [0]
 		};
@@ -1181,7 +1195,7 @@ public:
 		/* SF rate (expressed as a base-2 logarithm) 6, ..., 12. Other values reserved.  */
 		struct SpreadingFactor
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint16_t dflt = 0b0111; // 4'h7
 			static const uint16_t mask = 0b1111000000000000; // [12,13,14,15]
 			static const uint16_t SF_64 = 6; // 64 chips / symbol
@@ -1199,7 +1213,7 @@ public:
 		 */
 		struct TxContinuousMode
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint16_t dflt = 0b0; // 1'b0
 			static const uint16_t mask = 0b0000100000000000; // [11]
 		};
@@ -1207,7 +1221,7 @@ public:
 		/* 0 -> LNA gain set by register LnaGain1 -> LNA gain set by the internal AGC loop  */
 		struct AgcAutoOn
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint16_t dflt = 0b1; // 1'b1
 			static const uint16_t mask = 0b0000010000000000; // [10]
 		};
@@ -1218,7 +1232,7 @@ public:
 		 */
 		struct SymbTimeout
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint16_t dflt = 0b0001100100; // 10'h64
 			static const uint16_t mask = 0b0000001111111111; // [0,1,2,3,4,5,6,7,8,9]
 		};
@@ -1255,7 +1269,7 @@ public:
 		/* Bits Preamble: */
 		struct Preamble_
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint16_t dflt = 0b0000000000001000; // 16'h8
 			static const uint16_t mask = 0b1111111111111111; // [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 		};
@@ -1292,7 +1306,7 @@ public:
 		/* Bits PayloadLength: */
 		struct PayloadLength_
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b00000001; // 8'h1
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1329,7 +1343,7 @@ public:
 		/* Bits MaxPayloadLength: */
 		struct MaxPayloadLength_
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b11111111; // 8'hff
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1365,7 +1379,7 @@ public:
 		/* Bits HopPeriod: */
 		struct HopPeriod_
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b00000000; // 8'h0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1401,7 +1415,7 @@ public:
 		/* Bits FifoRxByteAddr: */
 		struct FifoRxByteAddr_
 		{
-			/* Mode:r */
+			/* MODE r */
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
 	};
@@ -1443,7 +1457,7 @@ public:
 		 */
 		struct FreqError
 		{
-			/* Mode:r */
+			/* MODE r */
 			static const uint32_t dflt = 0b00000000000000000000; // 20'h0
 			static const uint32_t mask = 0b000011111111111111111111; // [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
 		};
@@ -1479,7 +1493,7 @@ public:
 		/* Bits RssiWideband: */
 		struct RssiWideband_
 		{
-			/* Mode:r */
+			/* MODE r */
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
 	};
@@ -1512,18 +1526,18 @@ public:
 		/* Bits Reserved_0: */
 		struct Reserved_0
 		{
-			static const uint8_t dflt = 0b11000; // 5'h18
+			static const uint8_t dflt = 0b11000; // 5'b11000
 			static const uint8_t mask = 0b11111000; // [3,4,5,6,7]
 		};
 		/* Bits DetectionOptimize: */
 		/* LoRa detection Optimize  */
 		struct DetectionOptimize
 		{
-			/* Mode:rw */
-			static const uint8_t dflt = 0b011; // 3'h3
+			/* MODE rw */
+			static const uint8_t dflt = 0b011; // 3'b11
 			static const uint8_t mask = 0b00000111; // [0,1,2]
-			static const uint8_t SF7_12 = 0x3; // SF7 to SF12
-			static const uint8_t SF6 = 0x5; // 
+			static const uint8_t SF7_12 = 0b11; // SF7 to SF12
+			static const uint8_t SF6 = 0b101; // 
 		};
 	};
 	
@@ -1565,14 +1579,14 @@ public:
 		 */
 		struct InvertIQ_
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b01000000; // [6]
 		};
 		/* Bits Reserved_1: */
 		struct Reserved_1
 		{
-			static const uint8_t dflt = 0b100111; // 6'h27
+			static const uint8_t dflt = 0b100111; // 6'b100111
 			static const uint8_t mask = 0b00111111; // [0,1,2,3,4,5]
 		};
 	};
@@ -1607,6 +1621,7 @@ public:
 		/* Bits Threshold: */
 		struct Threshold
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b00001010; // 8'b1010
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 			static const uint8_t SF7_12 = 0xa; // SF7 to SF12
@@ -1644,7 +1659,7 @@ public:
 		/* Bits SyncWord: */
 		struct SyncWord_
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint8_t dflt = 0b00010010; // 8'h12
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
